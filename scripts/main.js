@@ -32,4 +32,3 @@ function operate(operation, a, b){
     }
 }
 
-console.log(operate("+", 2, 3));

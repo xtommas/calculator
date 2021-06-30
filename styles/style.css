@@ -46,8 +46,8 @@ table {
 /*END OF CSS RESET*/
 
 :root{
-    --operation-color: #FE9505;
-    --key-color: #A5A5A5;
+    --operator-color: #FE9505;
+    --special-color: #A5A5A5;
     --number-color: #333333;
     --number-color-pressed: #726F73;
 
@@ -62,6 +62,7 @@ html{
 
 body{
     font-family: 'Noto Sans', sans-serif;
+    background-color: black;
 }
 
 .container{
@@ -71,14 +72,78 @@ body{
     flex-direction: column;
     width: fit-content;
     height: fit-content;
+    background-color: black;
 }
 
 .screen{
-    width: 100%;
+    width: 300px;
+    padding-bottom: 5px;
 }
 
 input{
-    width: 100%;
+    width: 95%;
+    font-size: 60px;
+    border-style: none;
+    text-align: right;
+    background-color: black;
+    outline: none;
+    color:white;
+    
+}
+
+/*remove after being done*/
+::placeholder{
+    opacity: 1;
+    color: white;
+}
+
+button{
+    font-size: 30px;
+    border-radius: 100%;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: 5px 5px 5px 5px;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.special{
+    background-color: var(--special-color);
+    color: black;
+}
+
+.special:hover{
+    filter: brightness(120%)
+}
+
+.operator{
+    background-color: var(--operator-color);
+}
+
+.operator:hover{
+    filter: brightness(120%);
+}
+
+.number{
+    background-color: var(--number-color);
+}
+
+.number:hover{
+    background-color: var(--number-color-pressed);
+}
+
+#zero{
+    width: 135px;
+    border-radius: 30px/30px;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .keys{
