@@ -67,7 +67,6 @@ body{
 
 .container{
     display:flex;
-    /*justify-content: center;*/
     align-items: center;
     flex-direction: column;
     width: fit-content;
@@ -76,8 +75,22 @@ body{
 }
 
 .screen{
-    width: 300px;
+    width: 280px;
     padding-bottom: 5px;
+    color: white;
+}
+
+.keys{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.row{
+    display: flex;
+    width: fit-content;
 }
 
 input{
@@ -88,10 +101,8 @@ input{
     background-color: black;
     outline: none;
     color:white;
-    
 }
 
-/*remove after being done*/
 ::placeholder{
     opacity: 1;
     color: white;
@@ -117,13 +128,14 @@ button:hover{
 .special{
     background-color: var(--special-color);
     color: black;
+    font-size: 23px;
 }
 
 .special:hover{
     filter: brightness(120%)
 }
 
-.operator{
+.operator, .equal{
     background-color: var(--operator-color);
 }
 
@@ -131,7 +143,11 @@ button:hover{
     filter: brightness(120%);
 }
 
-.number{
+.equal:hover{
+    filter: brightness(120%);
+}
+
+.number, .comma{
     background-color: var(--number-color);
 }
 
@@ -139,23 +155,14 @@ button:hover{
     background-color: var(--number-color-pressed);
 }
 
+.comma:hover{
+    background-color: var(--number-color-pressed);
+}
+
 #zero{
-    width: 135px;
+    width: 130px;
     border-radius: 30px/30px;
     text-align: left;
     padding-left: 20px;
 }
 
-.keys{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.row{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
